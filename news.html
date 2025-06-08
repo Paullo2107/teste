@@ -1,176 +1,146 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relâmpago News</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <title>Lightning News</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --vermelho: #d60000;
+      --amarelo: #ffd700;
+      --fundo: #fff9e6;
+    }
 
-        body {
-            font-family: 'Rubik', sans-serif;
-            background-color: #fff;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: var(--fundo);
+    }
 
-        header {
-            background-color: #ff0000;
-            color: white;
-            padding: 2rem;
-            text-align: center;
-        }
+    header {
+      background-color: var(--vermelho);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
 
-        header h1 {
-            font-size: 2.5rem;
-        }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
 
-        header p {
-            margin-top: 0.5rem;
-            font-size: 1.2rem;
-        }
+    header p {
+      margin: 5px 0 0;
+      font-style: italic;
+      color: var(--amarelo);
+    }
 
-        main {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 2rem;
-        }
+    nav {
+      background-color: var(--amarelo);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
-        .card {
-            background-color: #fffbea;
-            border: 2px solid #ff0000;
-            border-radius: 16px;
-            padding: 2rem;
-            max-width: 500px;
-            width: 100%;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            text-align: center;
-            margin-bottom: 2rem;
-        }
+    nav a {
+      color: #000;
+      font-weight: bold;
+      padding: 14px 20px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
 
-        .card h2 {
-            margin-bottom: 1rem;
-            color: #ff0000;
-        }
+    nav a:hover {
+      background-color: var(--vermelho);
+      color: white;
+    }
 
-        .subscribe-button {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            background-color: #ff0000;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 1rem;
-            transition: background-color 0.3s ease;
-        }
+    .destaque {
+      background-color: white;
+      padding: 20px;
+      margin: 20px;
+      border-left: 8px solid var(--vermelho);
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
 
-        .subscribe-button:hover {
-            background-color: #cc0000;
-        }
+    .noticias {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+      justify-content: center;
+    }
 
-        .news {
-            background-color: #fffbea;
-            border: 2px solid #ff0000;
-            border-radius: 16px;
-            padding: 2rem;
-            max-width: 800px;
-            width: 100%;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
+    .noticia {
+      background-color: white;
+      padding: 15px;
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
 
-        .news h2 {
-            color: #ff0000;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
+    .noticia:hover {
+      transform: scale(1.03);
+    }
 
-        .news-item {
-            margin-bottom: 1.5rem;
-        }
+    .noticia img {
+      width: 100%;
+      border-radius: 5px;
+    }
 
-        .news-item h3 {
-            margin-bottom: 0.3rem;
-            color: #333;
-        }
+    .noticia h3 {
+      color: var(--vermelho);
+    }
 
-        .news-item p {
-            margin-bottom: 0.5rem;
-        }
-
-        .news-item a {
-            color: #ff0000;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .news-item a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            background-color: #f8f8f8;
-            padding: 1rem;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #666;
-        }
-    </style>
+    footer {
+      background-color: var(--vermelho);
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>⚡ Lightning News</h1>
+    <p>As notícias mais quentes e rápidas do Brasil</p>
+  </header>
 
-    <header>
-        <h1>Relâmpago News</h1>
-        <p>As notícias do mundo em 5 minutos!</p>
-    </header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Política</a>
+    <a href="#">Esportes</a>
+    <a href="#">Tecnologia</a>
+    <a href="#">Economia</a>
+  </nav>
 
-    <main>
-        <div class="card">
-            <h2>Assine Gratuitamente</h2>
-            <p>Receba as principais notícias no seu e-mail.</p>
-            <br>
-            <a href="https://seulinkdogoogleforms.com" target="_blank" class="subscribe-button">
-                Inscrever-se!
-            </a>
-        </div>
+  <section class="destaque">
+    <h2>⚡ Destaque: Mudança Climática em Foco</h2>
+    <p><strong>Brasília</strong> – Especialistas alertam sobre recordes de temperatura no Brasil. Veja o que pode ser feito.</p>
+  </section>
 
-        <div class="news">
-            <h2>Últimas Notícias</h2>
+  <section class="noticias">
+    <div class="noticia">
+      <img src="https://via.placeholder.com/300x150" alt="Notícia 1">
+      <h3>Nova greve dos caminhoneiros impacta mercados</h3>
+      <p>Bloqueios em rodovias causam alta nos preços de alimentos.</p>
+    </div>
+    <div class="noticia">
+      <img src="https://via.placeholder.com/300x150" alt="Notícia 2">
+      <h3>Flamengo vence clássico com golaço de Pedro</h3>
+      <p>Time carioca lidera o Brasileirão após rodada eletrizante.</p>
+    </div>
+    <div class="noticia">
+      <img src="https://via.placeholder.com/300x150" alt="Notícia 3">
+      <h3>Startup brasileira lança carro elétrico acessível</h3>
+      <p>Modelo promete autonomia de 500 km e preço competitivo.</p>
+    </div>
+  </section>
 
-            <div class="news-item">
-                <h3>🌎 Economia global cresce acima do esperado</h3>
-                <p>O FMI divulgou que a economia mundial teve crescimento de 3,2% no último trimestre.</p>
-                <a href="https://linkdanoticia.com" target="_blank">Ler mais</a>
-            </div>
-
-            <div class="news-item">
-                <h3>🚀 Nova missão espacial é lançada com sucesso</h3>
-                <p>A SpaceX colocou em órbita mais 60 satélites para melhorar a internet global.</p>
-                <a href="https://linkdanoticia.com" target="_blank">Ler mais</a>
-            </div>
-
-            <div class="news-item">
-                <h3>⚡ Crise energética na Europa</h3>
-                <p>Autoridades europeias alertam para possível escassez de energia no inverno.</p>
-                <a href="https://linkdanoticia.com" target="_blank">Ler mais</a>
-            </div>
-
-        </div>
-    </main>
-
-    <footer>
-        © 2025 Relâmpago News — Todos os direitos reservados
-    </footer>
-
+  <footer>
+    <p>&copy; 2025 Lightning News. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
