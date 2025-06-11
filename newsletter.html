@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Relâmpago News</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --vermelho: #d60000;
+      --cinza: #e0e0e0;
+      --fundo: #fff9e6;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: var(--fundo);
+    }
+
+    header {
+      background-color: var(--vermelho);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      font-style: italic;
+      color: var(--cinza);
+    }
+
+    nav {
+      background-color: var(--cinza);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #000;
+      font-weight: bold;
+      padding: 14px 20px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: var(--vermelho);
+      color: white;
+    }
+
+    .destaque {
+      background-color: white;
+      padding: 20px;
+      margin: 20px;
+      border-left: 8px solid var(--vermelho);
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .noticias {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+      justify-content: center;
+    }
+
+    .noticia {
+      background-color: white;
+      padding: 15px;
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .noticia:hover {
+      transform: scale(1.03);
+    }
+
+    .noticia img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .noticia h3 {
+      color: var(--vermelho);
+    }
+
+    .newsletter {
+      background-color: var(--cinza);
+      padding: 30px;
+      text-align: center;
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    .newsletter input[type="email"] {
+      padding: 10px;
+      width: 250px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .newsletter button {
+      padding: 10px 20px;
+      background-color: var(--vermelho);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: var(--vermelho);
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>⚡ Relâmpago News</h1>
+    <p>As notícias mais quentes e rápidas do Brasil</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Política</a>
+    <a href="#">Esportes</a>
+    <a href="#">Tecnologia</a>
+    <a href="#">Economia</a>
+  </nav>
+
+  <section class="destaque">
+    <h2>⚡ Destaque: Mudança Climática em Foco</h2>
+    <p><strong>Brasília</strong> – Especialistas alertam sobre recordes de temperatura no Brasil. Veja o que pode ser feito.</p>
+  </section>
+
+  <section class="noticias">
+    <div class="noticia">
+      <img src="https://via.placeholder.com/300x200?text=Bolsonaro+e+STF" alt="Bolsonaro e STF">
+      <h3>Bolsonaro critica Alexandre de Moraes após decisão do TSE</h3>
+      <p>Ex-presidente afirma que será "vítima de perseguição política" após novas decisões do STF e do TSE que o tornam inelegível até 2030.</p>
+    </div>
+
+    <div class="noticia">
+      <img src="https://via.placeholder.com/300x200?text=Crise+no+Sudao" alt="Crise no Sudão">
+      <h3>Crise no Sudão se agrava com novos confrontos</h3>
+      <p>Organizações humanitárias alertam para o aumento do número de refugiados com a intensificação da guerra civil entre facções militares rivais.</p>
+    </div>
+
+    <div class="noticia">
+      <img src="https://via.placeholder.com/300x200?text=Sao+Paulo+FC" alt="São Paulo Futebol Clube">
+      <h3>São Paulo vence Palmeiras e assume vice-liderança</h3>
+      <p>Com gol de Lucas Moura, Tricolor vence clássico no Morumbi e mantém invencibilidade sob comando de Zubeldía.</p>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <h2>📩 Assine nossa Newsletter</h2>
+    <p>Receba as principais notícias do dia diretamente no seu e-mail.</p>
+    <form>
+      <input type="email" placeholder="Digite seu e-mail" required>
+      <button type="submit">Assinar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Relâmpago News. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
