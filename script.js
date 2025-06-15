@@ -1,12 +1,12 @@
 const noticias = [
   {
     titulo: "Brasil avança em tecnologia sustentável",
-    imagem: "assets/noticia1.jpg",
+    imagem: "https://github.com/Paullo2107/teste/tree/main/imagens/noticia1",
     link: "https://g1.globo.com/brasil/noticia1",
   },
   {
     titulo: "Nova descoberta na medicina impressiona cientistas",
-    imagem: "assets/noticia2.jpg",
+    imagem: "https://github.com/Paullo2107/teste/tree/main/imagens/noticia2",
     link: "https://g1.globo.com/saude/noticia2",
   }
 ];
